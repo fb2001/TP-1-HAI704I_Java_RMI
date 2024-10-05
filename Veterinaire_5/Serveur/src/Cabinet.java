@@ -67,9 +67,7 @@ public class Cabinet extends UnicastRemoteObject implements Icabinet {
             if (animal.getNom().equals(nom)) {
                 boolean supprime = patients.remove(animal); // Supprime l'animal de la liste des patients
                 if (supprime) {
-                    System.out.println("Nombre total de patients après suppression : " + patients.size());
-                    System.out.println("Nombre de clients à informer : " + clients.size());
-
+                   
                     // Appel à la notification lorsqu'un multiple de 100 est atteint
                     notification_cab(patients.size(), "Un animal a été supprimé.");
                 }
