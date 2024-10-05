@@ -26,30 +26,14 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-           Iclient client = new Client();
+            Iclient client = new Client();
 
-           client.setUpRegistry();
+            client.setUpRegistry();
 
-           Icabinet stubcabinet = client.lookupCabinet("cabinet");
+            Icabinet stubcabinet = client.lookupCabinet("cabinet");
 
-           stubcabinet.addClient(client);
+            stubcabinet.addClient(client);
 
-            // Affichage du cabinet avant modification
-
-/*            System.out.println("Le Cabinet avant modification : ");
-            for (interfaceAnimal animal : stubcabinet.getlistAnimal()) {
-                System.out.println(animal.getAnimal());
-            }
-
- */
-
-            // Ajouter un nouvel animal
-            //Dog dog = new Dog("boubich",15);
-            // creation de m'espece Dog pour Client
-
-            //Boolean ajout_oupas = stubcabinet.addAnimal("boubich","tarzan",dog ,"vide");
-
-            //System.out.println("ajout ou pas : "+ajout_oupas);
 
             // Maintenant passage a l'ajout des client pour voir si il y a execution de la  condition 100 , 500 , 1000
 

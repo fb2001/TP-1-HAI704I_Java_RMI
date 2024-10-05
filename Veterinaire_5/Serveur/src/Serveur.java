@@ -6,10 +6,10 @@ public class Serveur {
 
         try{
 
-            System.setProperty("java.security.policy", "/home/fadel_benomar/Bureau/Master_s1/architectures_distribuées/RMI/Final_RMI/Veterinaire_5/Serveur/src/Security.policy");
+            System.setProperty("java.security.policy", "/home/fadel_benomar/Bureau/Projet_RMI_FINAL+Rapport/Veterinaire_5/Serveur/src/Security.policy");
             System.setSecurityManager(new SecurityManager());
 
-            System.setProperty("java.rmi.server.codebase", "file:/home/fadel_benomar/Bureau/Master_s1/architectures_distribuées/RMI/Final_RMI/Veterinaire_5/Client/codebase_dog/");            // sans le file j'aurai une exceptionl'exception du client : java.rmi.ServerException: RemoteException occurred in server thread; nested exception is:java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: java.net.MalformedURLException: no protocol: /home/fadel_benomar/Bureau/Project_vet_fin4/Client/codebase_dog
+            System.setProperty("java.rmi.server.codebase", "file:/home/fadel_benomar/Bureau/Projet_RMI_FINAL+Rapport/Veterinaire_5/Client/codebase_dog/");            // sans le file j'aurai une exceptionl'exception du client : java.rmi.ServerException: RemoteException occurred in server thread; nested exception is:java.rmi.UnmarshalException: error unmarshalling arguments; nested exception is: java.net.MalformedURLException: no protocol: /home/fadel_benomar/Bureau/Project_vet_fin4/Client/codebase_dog
 
             Espece espece = new Espece("chat" , 27);
 
@@ -31,48 +31,29 @@ public class Serveur {
                    */
                 registry.bind("cabinet",cab);
                 System.err.println("Server_ready cabinet");
-                /*
-                System.out.println("Le Cabinet avant modification : ");
-                for(interfaceAnimal animal : cab.getlistAnimal()){
-                    System.out.println(animal.getAnimal());
-                }
-
 
 
                 Thread.sleep(4000);
 
 
                 //Affichage de combien de clients est dans le cabinet
-                            System.out.println("Nombre de client 1ere attente dans le cabinet \n" +cab.sizeclients());
+                System.out.println("Nombre de client 1ere attente dans le cabinet \n" +cab.sizeclients());
 
-                            Thread.sleep(10000);
-
-
-                            //Affichage de combien de clients est dans le cabinet
-                            System.out.println("Nombre de client apres 2eme attentedans le cabinet \n" +cab.sizeclients());
-
-                            Thread.sleep(10000);
+                Thread.sleep(10000);
 
 
-                            //Affichage de combien de clients est dans le cabinet
-                            System.out.println("Nombre de client apres 3eme attente dans le cabinet \n" +cab.sizeclients());
+                //Affichage de combien de clients est dans le cabinet
+                System.out.println("Nombre de client apres 2eme attente dans le cabinet \n" +cab.sizeclients());
 
-                System.out.println("Le Cabinet apres modification : ");
-                for(interfaceAnimal animal : cab.getlistAnimal()){
-                    System.out.println(animal.getAnimal());
-                }
+                Thread.sleep(10000);
 
-                 */
 
-             /*   //Espece
-                System.out.println(("l'espece de l'animal au depart est : "+ obj.getEspece().getNom()));
+                //Affichage de combien de clients est dans le cabinet
+                System.out.println("Nombre de client apres 3eme attente dans le cabinet \n" +cab.sizeclients());
 
 
 
-                Thread.sleep(5000);
-                System.out.println(("l'espece de l'animal apres la modif est : "+ obj.getEspece().getNom()));
-                System.out.println(("le dossier de l'animal à la fin  est : "+ obj.getDossieranimal()));
-    */
+
 
             }
 

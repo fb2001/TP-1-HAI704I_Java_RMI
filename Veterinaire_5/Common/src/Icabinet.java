@@ -12,5 +12,5 @@ public interface Icabinet extends Remote {
     boolean addAnimal(String name, String ownerName,Espece espece ,String dossier) throws RemoteException;
     void addClient(Iclient client) throws RemoteException;
     boolean supprimerAnimal(String nom) throws RemoteException;
-
+    int sizeclients() throws RemoteException;
 }

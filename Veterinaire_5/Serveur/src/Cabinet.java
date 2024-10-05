@@ -88,7 +88,7 @@ public class Cabinet extends UnicastRemoteObject implements Icabinet {
 
 
 
-    public int sizeclients() {
+    public int sizeclients() throws RemoteException {
         // Retourne la taille de la liste des clients
         return clients.size();
     }
